@@ -1,0 +1,6 @@
+export default {
+  'auth/user-not-found': 'Пользователя с таким email не существует',
+  'auth/wrong-password': 'Неверный пароль',
+  'auth/email-already-in-use': 'Пользователь с таким email уже зарегестрирован',
+  'auth/invalid-email': 'Введите действительный email'
+}

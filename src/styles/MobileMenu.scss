@@ -1,0 +1,36 @@
+.list-controls {
+  padding: 0px;
+  margin: 0px;
+}
+.nav-button {
+  font-size: 14px;
+  color: black;
+  height: 52px !important;
+  padding: 14px 20px !important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: left;
+  border-bottom: 0.5px solid #ccc;
+  border-radius: 0px;
+  font-weight: 400;
+  letter-spacing: normal;
+  justify-content: space-between;
+}
+.mark-button {
+  background: transparent !important;
+}
+.back-button {
+  text-align: center;
+  color: #111111;
+}
+.spacer-right {
+  margin-right: 24px;
+}
+.icon-left {
+  margin: 0px;
+}
+.first-button {
+  border-top:0.5px solid #ccc !important;
+}
+a {
+  text-decoration: none !important;
+}

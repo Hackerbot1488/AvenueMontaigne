@@ -32,6 +32,14 @@
       depressed
       class="nav-button"
       @click="$emit('pushed')"
+      :to="{name: 'Products', params:{category:'shoes', type:'chelsea', brand:'all', gender:'female', isNew:'all', isOnSale:'all'}}"
+      >Челси
+    </v-btn>
+    <v-btn
+      block
+      depressed
+      class="nav-button"
+      @click="$emit('pushed')"
       :to="{name: 'Products', params:{category:'shoes', type:'boots', brand:'all', gender:'female', isNew:'all', isOnSale:'all'}}"
       >Ботинки
     </v-btn>

@@ -744,7 +744,19 @@ export default {
         this.sizesClothesModel = []
       }
     } else {
-      this.products = await this.$store.dispatch('fetchForMenu', this.conditions)
+      if (this.paramsSelects.gender === 'kidsAll') {
+        const boys = await this.$store.dispatch('fetchForMenu', {
+          ...this.conditions,
+          gender: 'boys'
+        })
+        const girls = await this.$store.dispatch('fetchForMenu', {
+          ...this.conditions,
+          gender: 'girls'
+        })
+        this.products = boys.concat(girls)
+      } else {
+        this.products = await this.$store.dispatch('fetchForMenu', this.conditions)
+      }
       if (this.paramsSelects.category === 'all') {
         this.categories = ['Обувь', 'Одежда', 'Аксессуары']
         this.categoriesModel = []

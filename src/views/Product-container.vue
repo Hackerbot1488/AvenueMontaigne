@@ -375,16 +375,20 @@
     <div class="wrap-product-container">
       <div v-if="!datak.length" class="empty-results">По вашему запросу ничего не найдено.</div>
       <div v-else class="wrap-products">
-        <div v-if="screenWidth > 1000" v-infinite-scroll="loadMore" class="wrap-three-prod" infinite-scroll-disabled="busy" infinite-scroll-distance="8">
+        <div v-if="screenWidth > 1000" class="wrap-three-prod">
           <div class="three-prod" v-for="(item, index) in this.$treepleArr(datak, 3)" :key="index">
             <Product v-for="(it, index) in item" :key="it.id + index" :product="{...it, right: index === 2 ? true : false}" />
           </div>
         </div>
-        <div v-else v-infinite-scroll="loadMore" class="wrap-three-prod" infinite-scroll-disabled="busy" infinite-scroll-distance="8">
+        <div v-else class="wrap-three-prod">
           <div class="three-prod" v-for="(item, index) in this.$treepleArr(datak, 2)" :key="index">
             <Product v-for="(it, index) in item" :key="it.id + index" :product="{...it, right: index === 1 ? true : false}" />
           </div>
         </div>
+        <infinite-loading spinner="circles" @infinite="infiniteHandler">
+          <div slot="no-more"></div>
+          <div slot="no-results"></div>
+        </infinite-loading>
       </div>
     </div>
   </div>
@@ -436,16 +440,15 @@ export default {
     clicked () {
       this.pressed = !this.pressed
     },
-    loadMore: function () {
+    infiniteHandler: function ($state) {
       if (this.arr.length > 0) {
-        this.busy = true
-        setTimeout(() => {
-          for (var i = 0, j = 8; i < j && this.arr.length > 0; i++) {
-            this.datak.push(this.arr[0])
-            this.arr.splice(0, 1)
-          }
-          this.busy = false
-        }, 10)
+        for (var i = 0, j = 8; i < j && this.arr.length > 0; i++) {
+          this.datak.push(this.arr[0])
+          this.arr.splice(0, 1)
+        }
+        $state.loaded()
+      } else {
+        $state.complete()
       }
     },
     changedSortType () {
@@ -793,9 +796,13 @@ export default {
       this.datak.push(this.products[j])
     }
     this.arr.splice(0, this.datak.length)
+    console.log(this.arr)
     this.interval = setInterval(() => {
       this.screenWidth = window.outerWidth
-    }, 100)
+    }, 101)
+    /* setTimeout(() => {
+      this.loadMore()
+    }, 10000) */
   },
   beforeDestroy () {
     clearInterval(this.interval)

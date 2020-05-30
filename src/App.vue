@@ -62,7 +62,7 @@ export default {
   async mounted () {
     var uid = await this.$store.dispatch('getUid')
     if (uid) {
-      this.$store.dispatch('fetchUser')
+      await this.$store.dispatch('fetchUser')
     } else {
       await this.$store.dispatch('loginAnonim')
       uid = await this.$store.dispatch('getUid')

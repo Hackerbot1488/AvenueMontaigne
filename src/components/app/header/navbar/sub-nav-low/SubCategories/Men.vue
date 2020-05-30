@@ -30,6 +30,7 @@
             <router-link :to="{name: 'Products', params:{category:'shoes', type:'all', brand:'all', gender:'male', isNew:'all', isOnSale:'all'}}" ><span class="header-news">ОБУВЬ</span></router-link>
             <router-link :to="{name: 'Products', params:{category:'shoes', type:'snickers', brand:'all', gender:'male', isNew:'all', isOnSale:'all'}}"><span>Кроссовки и кеды</span></router-link>
             <router-link :to="{name: 'Products', params:{category:'shoes', type:'lowshoes', brand:'all', gender:'male', isNew:'all', isOnSale:'all'}}"><span>Туфли</span></router-link>
+            <router-link :to="{name: 'Products', params:{category:'shoes', type:'chelsea', brand:'all', gender:'male', isNew:'all', isOnSale:'all'}}"><span>Челси</span></router-link>
             <router-link :to="{name: 'Products', params:{category:'shoes', type:'boots', brand:'all', gender:'male', isNew:'all', isOnSale:'all'}}"><span>Ботинки</span></router-link>
             <router-link :to="{name: 'Products', params:{category:'shoes', type:'lofers', brand:'all', gender:'male', isNew:'all', isOnSale:'all'}}"><span>Лоферы</span></router-link>
           </div>

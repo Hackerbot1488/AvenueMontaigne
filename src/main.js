@@ -4,18 +4,15 @@ import router from './router'
 import store from './store'
 import Meta from 'vue-meta'
 import firebase from 'firebase/app'
-import BootstrapVue from 'bootstrap-vue'
 import currencyFilter from '@/filters/currency.filter.js'
 import sizesPlugin from '@/utils/sizes.plugin.js'
 import defenitionsPlugin from '@/utils/defenitions.plugin.js'
 import treepleArrPlugin from '@/utils/treepleArr.plugin.js'
-import infiniteScroll from 'vue-infinite-scroll'
+import InfiniteLoading from 'vue-infinite-loading'
 import './registerServiceWorker'
 import 'firebase/auth'
 import 'firebase/database'
 import 'firebase/storage'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import vuetify from './plugins/vuetify'
 import Loader from '@/components/app/loader/Loader.vue'
 Vue.config.productionTip = false
@@ -30,19 +27,13 @@ firebase.initializeApp({
   measurementId: 'G-57XDVP5Z04'
 })
 Vue.use(Meta)
-Vue.use(BootstrapVue)
-Vue.use(infiniteScroll)
+Vue.use(InfiniteLoading)
 Vue.use(sizesPlugin)
 Vue.use(defenitionsPlugin)
 Vue.use(treepleArrPlugin)
 Vue.component('Loader', Loader)
 Vue.filter('Currency', currencyFilter)
-/* new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app') */
+
 let app
 
 firebase.auth().onAuthStateChanged(() => {

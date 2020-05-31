@@ -32,6 +32,7 @@ export default {
   border-left: 0.5px solid #ccc;
   display: block;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -66,7 +67,9 @@ export default {
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
-
+.dropbtn:hover {
+  text-decoration: underline;
+}
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   color:black;

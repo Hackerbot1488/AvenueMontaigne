@@ -116,6 +116,7 @@ export default {
   text-align: left;
   display:block;
   font-size: 12px;
+  font-family: "Century Gothic";
 }
 .header-news {
   font-family: "Century Gothic";

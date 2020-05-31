@@ -75,6 +75,9 @@ export default {
 .wrap-content {
   margin-right: 18px;
 }
+.wrap-content a {
+  text-decoration: none;
+}
 .carousel-links {
   display: none;
 }
@@ -96,6 +99,7 @@ export default {
     height: 100%;
   }
   width: 100%;
+  text-decoration: none;
 }
 .wrap-info {
   display: flex;

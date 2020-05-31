@@ -1,6 +1,6 @@
 <template>
     <div class="dropdown">
-      <router-link style="text-decoration:none;" to="/develop" class="dropbtn"><span>Помощь</span></router-link>
+      <router-link to="/develop" class="dropbtn"><span>Помощь</span></router-link>
       <div class="dropdown-content">
         <br/>
         <router-link to="/develop">Статус заказа</router-link>
@@ -17,7 +17,7 @@ export default {
   name: 'DropHelp'
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 /* Dropdown Button */
 .dropbtn {
   color: rgb(116, 114, 114);
@@ -27,6 +27,7 @@ export default {
   border-left: 0.5px solid #ccc;
   display: block;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -45,6 +46,9 @@ export default {
   max-width: 170px;
   z-index: 10000;
   border:0.5px solid #c1c4be;
+  a {
+    text-decoration: none;
+  }
 }
 
 /* Links inside the dropdown */
@@ -57,6 +61,9 @@ export default {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {color:black;}
 
+.dropbtn:hover {
+  text-decoration: underline;
+}
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 

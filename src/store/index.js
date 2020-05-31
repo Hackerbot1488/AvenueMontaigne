@@ -4,7 +4,6 @@ import products from './products.js'
 import auth from './auth.js'
 import user from './user.js'
 import bag from './bag.js'
-import images from './images.js'
 import purchases from './purchases.js'
 import favorite from './favorite.js'
 import firebase from 'firebase/app'
@@ -24,7 +23,6 @@ export default new Vuex.Store({
     products,
     auth,
     user,
-    images,
     bag,
     purchases,
     favorite

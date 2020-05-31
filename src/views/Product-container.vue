@@ -796,7 +796,6 @@ export default {
       this.datak.push(this.products[j])
     }
     this.arr.splice(0, this.datak.length)
-    console.log(this.arr)
     this.interval = setInterval(() => {
       this.screenWidth = window.outerWidth
     }, 101)

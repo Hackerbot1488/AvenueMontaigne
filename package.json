@@ -20,7 +20,7 @@
     "vue-infinite-loading": "^2.4.5",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.4.8",
-    "vuetify": "^2.2.20",
+    "vuetify": "^2.6.10",
     "vuex": "^3.5.1"
   },
   "devDependencies": {

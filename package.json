@@ -11,7 +11,7 @@
     "bootstrap": "^3.4.1",
     "bootstrap-vue": "^2.18.0",
     "core-js": "^3.6.5",
-    "firebase": "^8.0.1",
+    "firebase": "^10.2.0",
     "firebase-cli": "^1.2.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
